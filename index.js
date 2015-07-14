@@ -8,31 +8,19 @@ module.exports = {
 
     request({url:url, qs:propertiesObject}, function(err, response, body) {
       if(err) { console.log(err); return callback(err); }
-      // console.log('response', response);
-      // console.log('body', body);
-      return callback(null, body);
+      // return callback(null, body);
+      return callback(null, 'APRS message sent.');
     });
   },
 
-  get: function(from, callback) {
+  receive: function(from, callback) {
 
     var url = 'http://api.aprs.fi/api/get';
     var propertiesObject = { what:'msg', dst:from, apikey: '27286.QJTmrxJGMvlNh', format:'json' };
 
     request({url:url, qs:propertiesObject}, function(err, response, body) {
       if(err) { console.log(err); return callback(err); }
-      // console.log('response', response);
-      // console.log('body', body);
       return callback(null, body);
     });
-    // request.get({url:url, qs:propertiesObject})
-    //   .end(function(err, body) {
-    //     if(err) { console.log(err); return callback(err); }
-    //     // console.log('response', response);
-    //     console.log('body', body);
-    //     callback(null, body);
-    //   });
-
-
   }
 };

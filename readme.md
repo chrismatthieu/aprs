@@ -12,7 +12,7 @@ aprs.send(fromCallsign, toCallsign, message, function(err, data){
   console.log(data);
 });
 
-aprs.get('73S', function(err, data){
+aprs.receive(toCallsign, function(err, data){
   if (err) {
     console.error(err);
     return

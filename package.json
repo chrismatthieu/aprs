@@ -1,13 +1,13 @@
 {
   "name": "aprs",
-  "version": "1.0.2",
-  "description": "aprs api",
+  "version": "1.0.3",
+  "description": "HamRadio APRS messaging service",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "aprs"
+    "aprs,hamradio,ham radio,amateurradio,amateur radio,73s"
   ],
   "devDependencies": {
     "request": "*"
